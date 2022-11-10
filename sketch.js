@@ -4,6 +4,7 @@
  *      -Make tile color change make sense: white -> color -> back to white
  */
 
+
 let tileSize = 10;
 let tiles = [];
 let rippler;
@@ -20,6 +21,8 @@ function setup() {
   }
 
   rippler = new Rippler();
+  colorMode(HSB, 255);
+
 }
 
 
@@ -35,6 +38,13 @@ function draw() {
   if (mouseIsPressed) {
     rippler.addRipple(mouseX, mouseY, 1);
   }
+
+
+  // if(random() < 0.02) {
+  //   let x = random(width);
+  //   let y = random(height);
+  //   rippler.addRipple(x,y,1);
+  // }
 
 }
 

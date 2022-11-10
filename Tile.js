@@ -7,8 +7,9 @@ class Tile {
     this.size = w;
     this.flipping = false;
     this.flipSpeed = 0.7;
-    // this.col = color(random(255), random(255), random(255));
+    // this.col = color(random(255), 0, random(255));
     this.col = color(0, random(255), random(255));
+    this.startTime = 0;
 
   }
 
@@ -20,15 +21,20 @@ class Tile {
         this.flipping = false;
         this.w = this.size;
       }
+      this.startTime++;
 
-      fill(this.col);
+      let c = map(this.startTime, 0, 50, 100,255);
+      fill(c, 255, 255);
+      // fill(this.col);
       // fill('DeepSkyBlue')
+      rect(this.x, this.y, this.w, this.h);
     } else {
       fill(255);
+      rect(this.x, this.y, this.w - 5, this.h - 5);
+      this.startTime = 0;
     }
 
     // noStroke()
-    rect(this.x, this.y, this.w, this.h);
   }
 
   flip(mx, my) {

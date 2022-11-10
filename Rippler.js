@@ -2,7 +2,7 @@ class Rippler {
   constructor() {
     this.ripples = [];
     this.maxSize = 200;
-    this.maxSpeed = 5;
+    this.maxSpeed = 6;
   }
 
 
