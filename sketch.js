@@ -9,6 +9,8 @@ let tileSize = 10;
 let tiles = [];
 let rippler;
 
+let counter = 0;
+
 function setup() {
   createCanvas(800, 500).parent('sketch-holder');
   rectMode(CENTER);
@@ -26,10 +28,10 @@ function setup() {
 }
 
 
-
 function draw() {
   background(18);
-  noStroke()
+  noStroke();
+
   tiles.forEach(t => {
     t.show();
   });
@@ -40,10 +42,13 @@ function draw() {
   }
 
 
+
+
+  // Random Fireworks
   // if(random() < 0.02) {
   //   let x = random(width);
   //   let y = random(height);
-  //   rippler.addRipple(x,y,1);
+  //   rippler.addripple(x,y,1);
   // }
 
 }

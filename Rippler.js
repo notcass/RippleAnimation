@@ -21,7 +21,6 @@ class Rippler {
           return false;
         }
         for (let i = 0; i < 30; i++) {
-
           let cx = (sin(this.angle) * this.size) +
             this.x;
           let cy = (cos(this.angle) * this.size) +
@@ -41,6 +40,9 @@ class Rippler {
 
   showRipples() {
     this.ripples = this.ripples.filter(r => r.animate());
+    // if(this.ripples.length > 0) {
+    // console.log(this.ripples.length);
+    // }
   }
 
 
